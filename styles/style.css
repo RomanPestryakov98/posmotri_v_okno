@@ -12,6 +12,11 @@ img {
   max-width: 100%;
 }
 
+input {
+  font-family: inherit;
+  color: inherit;
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -164,6 +169,24 @@ fieldset {
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .search-form__fieldset-title {
@@ -181,7 +204,27 @@ fieldset {
   appearance: none;
   width: 100%;
   font-size: 18px;
-  font-family: inherit;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:active {
+  border: 1px solid #fff;
+}
+
+.search-form__textfield:focus-visible {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__textfield::placeholder {
@@ -212,4 +255,21 @@ fieldset {
 
 .more-button {
   width: 100%;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
