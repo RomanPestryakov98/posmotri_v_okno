@@ -55,6 +55,7 @@ ol {
 .content__list {
   max-height: 534px;
   overflow: auto;
+  position: relative;
 }
 
 .content__details {
@@ -88,7 +89,6 @@ ol {
 }
 
 .title {
-
 }
 
 .result {
@@ -96,6 +96,10 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.result__video-container {
+  position: relative;
 }
 
 .result__video {
