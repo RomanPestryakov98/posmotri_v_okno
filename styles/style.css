@@ -12,6 +12,16 @@ img {
   max-width: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -42,6 +52,10 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+fieldset {
+  border: none;
 }
 
 .content {
@@ -88,11 +102,6 @@ ol {
   color: inherit;
 }
 
-.search-form {
-  display: flex;
-  justify-content: space-between;
-}
-
 .content__video-card-title {
   font-family: Oswald;
   font-weight: 700;
@@ -136,8 +145,43 @@ ol {
   max-height: 386px;
 }
 
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+}
+
 .search-form__fieldset-title {
   font-weight: 400;
   font-size: 18px;
   margin-bottom: 5px;
+}
+
+.search-form__textfield {
+  border: none;
+  background-color: transparent;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 2.5px 14px 2.5px 0;
+  appearance: none;
+}
+
+.search-form__textfield::placeholder {
+  opacity: 0.7;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
 }
