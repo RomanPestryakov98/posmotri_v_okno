@@ -156,6 +156,10 @@ fieldset {
   gap: 5px;
 }
 
+.search-form__fieldset:first-child {
+  flex: 0 1 225px;
+}
+
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
@@ -173,8 +177,11 @@ fieldset {
   background-color: transparent;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  padding: 2.5px 14px 2.5px 0;
+  padding: 2.5px 0;
   appearance: none;
+  width: 100%;
+  font-size: 18px;
+  font-family: inherit;
 }
 
 .search-form__textfield::placeholder {
@@ -184,4 +191,25 @@ fieldset {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
+  flex: 0 1 194px;
+}
+
+.button {
+  border: 1px solid #fff;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+  padding: 6px 15px;
+  max-height: 34px;
+  cursor: pointer;
+}
+
+.more-button {
+  width: 100%;
 }
